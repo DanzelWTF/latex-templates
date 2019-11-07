@@ -1,0 +1,74 @@
+\documentclass[
+  fontsize=12pt,                % Schriftgröße
+  version=last                  % Neueste Version von KOMA-Skript verwenden
+]{scrlttr2}
+
+% Encoding
+\usepackage[utf8]{inputenc}     % Use UTF-8 encoding
+\usepackage[T1]{fontenc}        % Character encoding
+\usepackage[gen]{eurosym}       % Eurosymbol
+
+% Language settings
+\usepackage[ngerman]{babel}     % New German with special character and syllabification
+%\usepackage[english]{babel}     % English
+
+% Grafics
+\usepackage{graphicx}
+
+% Font
+\usepackage{lmodern}
+
+\LoadLetterOption{DIN}          % Einstellungen für DIN 676 laden
+\LoadLetterOption{sender}       % Absenderdaten und -einstellungen aus absender.lco laden
+
+\begin{document}
+    \begin{letter}{%
+        % ===== Zielanschrift =====
+        Erika Musterfrau\\
+        Musterweg 43\\
+        56789 Musterhausen%
+        % =======================
+        }
+
+        % ====== Geschäftszeichenzeile =========
+        \setkomavar{yourref}{}          % Ihr Zeichen
+        \setkomavar{yourmail}{}         % Ihr Schreiben vom
+        \setkomavar{myref}{}            % Unser Zeichen
+        \setkomavar{customer}{}         % Kundennummer
+        \setkomavar{invoice}{}          % Rechnungsnummer
+        \setkomavar{place}{Esslingen} % Ort
+        \setkomavar{date}{\today}       % Datum
+        % =====================================
+
+        %\setkomavar{title}{Titel}      % Title of letter
+
+        \setkomavar{subject}{Betreff}   % Subject of the letter
+
+        \opening{Sehr geehrte Frau Musterfrau,}
+
+        hier kommt der Text hin.
+
+        \closing{Mit freundlichen Grüßen,}
+
+        % ===== Postskriptum =====
+        %\ps PS: \dots
+        % ========================
+
+        % ===== Anlage(n) =====
+        % \setkomavar*{enclseparator}{Anlage}
+        % \encl{%
+        %   Anlage 1\\
+        %   Anlage 2%
+        % }
+        % ===================
+
+        % ===== CC =====
+        % \setkomavar*{ccseparator}{Kopie an}
+        % \cc{%
+        %   Distributor 1\\
+        %   Distributor 2%
+        % }
+        % =====================
+
+    \end{letter}
+\end{document}
